@@ -1,0 +1,3 @@
+subdir('engine')
+subdir('game')
+

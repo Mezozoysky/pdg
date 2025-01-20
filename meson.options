@@ -1,0 +1,40 @@
+option('pdg_build_ut', type: 'boolean', value: true,
+    description: 'Build unit-tests for pork libraries',
+)
+
+option('pdg_build_examples', type: 'boolean', value: true,
+    description: 'Build examples for pork libraries',
+)
+
+option('pdg_build_cnfg_impl_default', type: 'boolean', value: true,
+    description: 'Build default implementation for Config',
+)
+
+option('pork_build_rndr_common', type: 'boolean', value: true,
+    description: 'Build pork-rndr-common: provides common types which rndr shares with other libraries',
+)
+
+option('pork_build_rndr_common_sdl2', type: 'boolean', value: true,
+    description: 'Build pork-rndr-common-sdl2: provides conversions between pork-rndr-common types and SDL2 types',
+)
+
+option('pork_build_wndw', type: 'boolean', value: true,
+    description: 'Build pork-wndw library: provides Window abstraction',
+)
+
+option('pork_build_wndw_impl_default', type: 'boolean', value: true,
+    description: 'Build default implementation for Window',
+)
+
+option('pork_build_rndr', type: 'boolean', value: true,
+    description: 'Build pork-rndr library: provides Render service',
+)
+
+option('pork_build_rndr_impl_default', type: 'boolean', value: true,
+    description: 'Build default implementation for Render',
+)
+
+option('pork_build_base', type: 'boolean', value: true,
+    description: 'Build pork-base library: provides SDL-powered engine basement, classes like GfxApplication',
+)
+

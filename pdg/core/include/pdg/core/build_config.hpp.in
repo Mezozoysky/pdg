@@ -1,0 +1,16 @@
+#pragma once
+
+
+#mesondefine PDG_VERSION_MAJOR
+#mesondefine PDG_VERSION_MINOR
+#mesondefine PDG_VERSION_PATCH
+#mesondefine PDG_VERSION_STR
+#mesondefine PDG_VERSION_TAG_STR
+
+#mesondefine PDG_SYSTEM_WINDOWS
+#mesondefine PDG_SYSTEM_LINUX
+#mesondefine PDG_SYSTEM_ANDROID
+
+#mesondefine PDG_SYSTEM_64BIT
+#mesondefine PDG_SYSTEM_32BIT
+
