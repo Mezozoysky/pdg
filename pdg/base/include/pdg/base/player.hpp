@@ -17,7 +17,7 @@ public:
     explicit Player(std::string_view appName, std::string_view orgName = "");
     virtual ~Player() = default;
 
-    inline Engine & getContext() noexcept;
+    inline Engine & getEngine() noexcept;
 
     int play(int argc, char ** argv);
     int play(std::string const & cmd, std::vector<std::string> & args);
@@ -79,7 +79,7 @@ private:
 
 // inline members
 
-inline Engine & Player::getContext() noexcept
+inline Engine & Player::getEngine() noexcept
 {
     return mContext;
 }

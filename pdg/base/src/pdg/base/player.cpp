@@ -109,7 +109,7 @@ bool Player::findBasePath(std::string & basePath)
 #if defined(PDG_SYSTEM_ANDROID)
     return true; // base path makes no sence under Android so always return true
 #else
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::findBasePath()");
 
     char * basePathChars = SDL_GetBasePath();
@@ -131,7 +131,7 @@ bool Player::findBasePath(std::string & basePath)
 
 bool Player::findPrefPath(std::string & prefPath)
 {
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::findPrefPath()");
 
     char * prefPathChars = SDL_GetPrefPath(getOrgName().data(), getAppName().data());
@@ -153,10 +153,10 @@ bool Player::findPrefPath(std::string & prefPath)
 
 int Player::init()
 {
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::onInit()");
 
-    //auto * config = getContext().getService<cnfg::Config>();
+    //auto * config = getEngine().getService<cnfg::Config>();
     //if (!config->init(new cnfg::impl::DefaultConfigImpl()))
     //{
     //    PDG_ASSERT(false, "Failed to init config!");
@@ -179,10 +179,10 @@ int Player::init()
 
 int Player::setupConfig()
 {
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::onSetupConfig()");
 
-    //auto * config = getContext().getService<cnfg::Config>();
+    //auto * config = getEngine().getService<cnfg::Config>();
     
     return 0;
 }
@@ -190,10 +190,10 @@ int Player::setupConfig()
 
 int Player::configure(std::vector<std::string> & args)
 {
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::onConfigure()");
 
-    //auto * config = getContext().getService<cnfg::Config>();
+    //auto * config = getEngine().getService<cnfg::Config>();
 
     return 0;
 }
@@ -201,7 +201,7 @@ int Player::configure(std::vector<std::string> & args)
 
 int Player::setup()
 {
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::onSetup()");
 
     return 0;
@@ -210,7 +210,7 @@ int Player::setup()
 
 int Player::perform()
 {
-    //auto * log = getContext().getLog();
+    //auto * log = getEngine().getLog();
     //log->trace(PDG_BASE_APP, "base::Player::perform()");
 
     return 0;
@@ -219,7 +219,7 @@ int Player::perform()
 
 int Player::shutdown()
 {
-    auto * log = getContext().getLog();
+    auto * log = getEngine().getLog();
     log->trace(PDG_BASE_APP, "base::Player::onShutdown()");
 
     SDL_QuitSubSystem(SDL_INIT_TIMER);

@@ -25,7 +25,7 @@ public:
 protected:
     //virtual int perform() override
     //{
-    //    auto * log = getContext().getService<log::Log>();
+    //    auto * log = getEngine().getService<log::Log>();
     //    log->trace("TestPlayer::onRun()");
     //    
     //    int error = 0;
